@@ -59,7 +59,10 @@ export async function POST(
 
   if (error) {
     console.error(`Failed to insert into ${table}:`, error);
-    return NextResponse.json({ error: "Could not save response." }, { status: 500 });
+    return NextResponse.json(
+      { error: "Could not save response.", debug: error.message, debugCode: error.code },
+      { status: 500 }
+    );
   }
 
   return NextResponse.json({ ok: true, id: data.id }, { status: 201 });
