@@ -87,7 +87,7 @@ export const CONFIGS: Record<SectionKey, SectionConfig> = {
         title: "Wearable device",
         note: "Skip if you don't use a wearable",
         questions: [
-          { id: "wearable_connected", type: "radio", label: "Have you connected a wearable to Restore?", options: ["Yes — Apple Watch", "Yes — Apple Health", "Yes — Fitbit", "Yes — Whoop", "Yes — Oura", "No, I don't have one", "No, but I plan to"] },
+          { id: "wearable_connected", type: "text", label: "If you connected a wearable to Restore please enter which one" },
           { id: "wearable_familiarity", type: "radio", label: "How familiar are you with the metrics your wearable tracks (e.g. HRV, resting heart rate, sleep stages)?", options: ["Not at all", "Slightly", "Moderately", "Very familiar"] },
           { id: "wearable_check_freq", type: "scale", label: "I regularly check my wearable data to inform how I plan my day." },
         ],
